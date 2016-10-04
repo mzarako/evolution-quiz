@@ -193,7 +193,6 @@ function switchAnsweredCorrectly(state) {
 			$('.page7 .right-button').attr("disabled","disabled");
 			$('.page7 .wrong-button').attr("disabled","disabled");
 			$('.solution7').removeClass('hidden');
-			$('.which-question-container').addClass('hidden');
 			correctContainer($('#seven')); 
 			correctNotification($('.solution7'));
 			state.correct++;
