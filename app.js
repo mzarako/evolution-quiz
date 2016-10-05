@@ -62,8 +62,8 @@ function switchPage(state) {
 			$('.correct-text').remove();
 			$('.incorrect-text').remove();
 			$('.pageFinal h3 span').empty();
-			$('#one, #two, #three, #four, #five, #six, #seven').removeClass('correct-container');
-			$('#one, #two, #three, #four, #five, #six, #seven').removeClass('incorrect-container');
+			$('.which-question').removeClass('correct-container');
+			$('.which-question').removeClass('incorrect-container');
 			$('.which-question-container').addClass('hidden');
 			break;					
 	}
@@ -91,49 +91,49 @@ function switchAnsweredIncorrectly(state) {
 			$('.page1 .right-button').attr("disabled","disabled");
 			$('.page1 .wrong-button').attr("disabled","disabled");
 			$('.solution1').removeClass('hidden');
-			incorrectContainer($('#one')); 
+			incorrectContainer($('.which-question:nth-child(1)')); 
 			incorrectNotification($('.solution1'));
 			break;
 		case 2:
 			$('.page2 .right-button').attr("disabled","disabled");
 			$('.page2 .wrong-button').attr("disabled","disabled");
 			$('.solution2').removeClass('hidden');
-			incorrectContainer($('#two')); 
+			incorrectContainer($('.which-question:nth-child(2)')); 
 			incorrectNotification($('.solution2'));	
 			break;
 		case 3:
 			$('.page3 .right-button').attr("disabled","disabled");
 			$('.page3 .wrong-button').attr("disabled","disabled");
 			$('.solution3').removeClass('hidden');
-			incorrectContainer($('#three')); 
+			incorrectContainer($('.which-question:nth-child(3)')); 
 			incorrectNotification($('.solution3'));	
 			break;
 		case 4:
 			$('.page4 .right-button').attr("disabled","disabled");
 			$('.page4 .wrong-button').attr("disabled","disabled");
 			$('.solution4').removeClass('hidden');
-			incorrectContainer($('#four')); 
+			incorrectContainer($('.which-question:nth-child(4)')); 
 			incorrectNotification($('.solution4'));	
 			break;
 		case 5:
 			$('.page5 .right-button').attr("disabled","disabled");
 			$('.page5 .wrong-button').attr("disabled","disabled");
 			$('.solution5').removeClass('hidden');
-			incorrectContainer($('#five')); 
+			incorrectContainer($('.which-question:nth-child(5)')); 
 			incorrectNotification($('.solution5'));
 			break;	
 		case 6:
 			$('.page6 .right-button').attr("disabled","disabled");
 			$('.page6 .wrong-button').attr("disabled","disabled");
 			$('.solution6').removeClass('hidden');
-			incorrectContainer($('#six')); 
+			incorrectContainer($('.which-question:nth-child(6)')); 
 			incorrectNotification($('.solution6'));	
 			break;
 		case 7:
 			$('.page7 .right-button').attr("disabled","disabled");
 			$('.page7 .wrong-button').attr("disabled","disabled");
 			$('.solution7').removeClass('hidden');
-			incorrectContainer($('#seven')); 
+			incorrectContainer($('.which-question:nth-child(7)')); 
 			incorrectNotification($('.solution7'));
 			break;						
 	}
@@ -145,7 +145,7 @@ function switchAnsweredCorrectly(state) {
 			$('.page1 .right-button').attr("disabled","disabled");
 			$('.page1 .wrong-button').attr("disabled","disabled");
 			$('.solution1').removeClass('hidden');
-			correctContainer($('#one')); 
+			correctContainer($('.which-question:nth-child(1)')); 
 			correctNotification($('.solution1'));
 			state.correct++;
 			break;
@@ -153,7 +153,7 @@ function switchAnsweredCorrectly(state) {
 			$('.page2 .right-button').attr("disabled","disabled");
 			$('.page2 .wrong-button').attr("disabled","disabled");
 			$('.solution2').removeClass('hidden');
-			correctContainer($('#two')); 
+			correctContainer($('.which-question:nth-child(2)')); 
 			correctNotification($('.solution2'));
 			state.correct++;	
 			break;
@@ -161,7 +161,7 @@ function switchAnsweredCorrectly(state) {
 			$('.page3 .right-button').attr("disabled","disabled");
 			$('.page3 .wrong-button').attr("disabled","disabled");
 			$('.solution3').removeClass('hidden');
-			correctContainer($('#three')); 
+			correctContainer($('.which-question:nth-child(3)')); 
 			correctNotification($('.solution3'));
 			state.correct++;	
 			break;
@@ -169,7 +169,7 @@ function switchAnsweredCorrectly(state) {
 			$('.page4 .right-button').attr("disabled","disabled");
 			$('.page4 .wrong-button').attr("disabled","disabled");
 			$('.solution4').removeClass('hidden');
-			correctContainer($('#four')); 
+			correctContainer($('.which-question:nth-child(4)')); 
 			correctNotification($('.solution4'));	
 			state.correct++;
 			break;
@@ -177,7 +177,7 @@ function switchAnsweredCorrectly(state) {
 			$('.page5 .right-button').attr("disabled","disabled");
 			$('.page5 .wrong-button').attr("disabled","disabled");
 			$('.solution5').removeClass('hidden');
-			correctContainer($('#five')); 
+			correctContainer($('.which-question:nth-child(5)')); 
 			correctNotification($('.solution5'));
 			state.correct++;
 			break;	
@@ -185,7 +185,7 @@ function switchAnsweredCorrectly(state) {
 			$('.page6 .right-button').attr("disabled","disabled");
 			$('.page6 .wrong-button').attr("disabled","disabled");
 			$('.solution6').removeClass('hidden');
-			correctContainer($('#six')); 
+			correctContainer($('.which-question:nth-child(6)')); 
 			correctNotification($('.solution6'));	
 			state.correct++;
 			break;
@@ -193,7 +193,7 @@ function switchAnsweredCorrectly(state) {
 			$('.page7 .right-button').attr("disabled","disabled");
 			$('.page7 .wrong-button').attr("disabled","disabled");
 			$('.solution7').removeClass('hidden');
-			correctContainer($('#seven')); 
+			correctContainer($('.which-question:nth-child(7)')); 
 			correctNotification($('.solution7'));
 			state.correct++;
 			break;
